@@ -1,0 +1,45 @@
+{
+  "name": "wordpress-three",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "description": "Wordpress theme development workflow that supports an unproblematic three.js development experience",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "dev": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "author": "Padova Productions",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@types/dat.gui": "^0.7.7",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.5",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^1.1.6",
+    "internal-ip": "^6.2.0",
+    "mini-css-extract-plugin": "^2.2.0",
+    "prettier": "^2.3.2",
+    "prettier-webpack-plugin": "^1.2.0",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "three": "^0.131.3"
+  }
+}

@@ -1,0 +1,30 @@
+
+.loading-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    transition: opacity .84s .2s ease;
+}
+.loadbar{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    border-radius: 20px;
+    background-color: rgba(26,26,26, .08);
+}
+.loadbar-inner{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    border-radius: 20px;
+    background-color: rgba(26,26,26, .6);
+    transform-origin: left;
+    transform: scaleX(0);
+}

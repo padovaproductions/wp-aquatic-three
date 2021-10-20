@@ -1,0 +1,74 @@
+.fullscreen-toggler{
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    font-weight: bold;
+    background-color: rgba(0,0,0, .07);
+    border-radius: 5px;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 13px;
+    line-height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .35s ease;
+
+    svg{
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 24px;
+        height: 24px;
+        opacity: .7;
+    }
+
+    #icon-exit-fullscreen{
+        opacity: 0;
+    }
+    
+    &:after{
+        content: '';
+        font-size: 10px;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        right: 0;
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .35s ease;
+    }
+
+    &:hover{
+        opacity: 0.85;
+
+        &:after{
+            content: 'full screen';
+            opacity: 1;
+        }
+    }
+    
+    &:focus{
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+
+
+    &.fs{ 
+        &:after{
+            content: 'exit full screen';
+        }      
+        #icon-fullscreen{
+            opacity: 0;
+        }
+        #icon-exit-fullscreen{
+            opacity: .7;
+        }
+    }
+
+    // @media (min-width: $header-bp) {
+    //     display: none;
+    // }
+}

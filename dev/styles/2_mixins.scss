@@ -1,0 +1,53 @@
+@mixin hide-focus-outlines{
+    &:-webkit-any-link:focus {
+        outline-offset: 0px;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin no-scrollbar {
+    &::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        width: 0;
+        height: 0;
+        box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+        -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        outline: 0;
+    }
+}
+
+@mixin font-sizes($desktop, $tablet, $mobile){
+    
+    font-size: $mobile;
+    
+    @media (min-width: 576px) {
+        font-size: $tablet;
+    }
+
+    @media (min-width: 992px) {
+        font-size: $desktop;
+    }
+    
+}
+
+@mixin filled-text( $the_fill ){
+    color: inherit;
+    background: $the_fill;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
